@@ -1,4 +1,4 @@
-# WHR-Repository
+# WHR-Project
 <B>World Happiness Report Project</B>
 
 1. Intro
