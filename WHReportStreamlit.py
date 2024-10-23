@@ -881,8 +881,7 @@ if page == pages[3]:
         st.plotly_chart(fig)
 
         with st.expander("Interpretation/Insight"):
-            st.write("")
-        st.write("The feature correlation (Table and Heatmap Matrix) visually represents the correlation coefficients between "
+            st.write("The feature correlation (Table and Heatmap Matrix) visually represents the correlation coefficients between "
                  "various well-being and societal metrics. Key insights from it is as follows: \n\nLadder Score has strong "
                  "positive correlations with Logged GDP per capita (0.78), this indicates that higher economic performance is "
                  " strongly associated with higher ladder scores. Social Support (0.70) suggests that strong social networks "
@@ -908,6 +907,7 @@ if page == pages[3]:
                  "metrics. Strong positive correlations suggest that economic performance, social support, health outcomes, and "
                  "personal freedom are closely linked to higher well-being. In the opposite, higher perceptions of corruption "
                  "are associated with lower well-being and personal freedom.")
+            
 # *** Machine Learning *** #
 
 elif page == pages[4]:
