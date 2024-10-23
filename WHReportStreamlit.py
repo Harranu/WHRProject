@@ -491,10 +491,10 @@ if page == pages[3]:
         st.plotly_chart(fig)
 
         with st.expander("Interpretation/Insight"):
-            st.write("Between 2005-2007 the scores are relatively low, around 4, indicating lower levels of well-being."
+            st.write("Between 2005-2007 the scores are relatively low, around 4, indicating lower levels of well-being. "
                      "\n\nBetween 2008-2012 there was a noticeable increase in scores, suggesting improvements in "
                      "socio-economic conditions or policies. \n\nBetween 2013-2016 the upward trend continued, possibly "
-                     "reflecting sustained economic growth or social stability. \n\nWhereas 2017-2021 has the highest scores,"
+                     "reflecting sustained economic growth or social stability. \n\nWhereas 2017-2021 has the highest scores, "
                      "indicating significant improvements in well-being, possibly due to advancements in healthcare, "
                      "education, and economic opportunities.")
         st.write("\n")
