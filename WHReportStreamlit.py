@@ -362,7 +362,7 @@ if page == pages[3]:
                      "insight is the drastic decrease of participation in 2020, most notable in African and some parts of "
                      "Asia, one can assumed that this has to do with the world event, specifically the Covid19 pandemic, "
                      "which restricted the movement of people around the world  for a certain period. This map also give us "
-                     "better insight into the the ladder and feature scores of each countrie across time. Hover on the country "
+                     "better insight into the the ladder and feature scores of each countrie across time. Hover over the country "
                      "geolocation on the map to view the specific countries scores.")
         st.write("\n")
 
