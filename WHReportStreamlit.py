@@ -35,13 +35,8 @@ with open("styles.css") as f:
 
 # Sidebar content
 st.sidebar.image("whr_image00.jpeg", use_column_width=True)
-# st.sidebar.header("Table of contents")
-# st.sidebar.subheader("Subheading")
-# st.sidebar.title("Table of contents")
-# st.sidebar.text("Sidebar content goes here.")
 
 # Main content
-# st.title("Main ontent")
 pages = ["Preface", "Introduction", "Data Exploration & Cleaning", "Data Visualization & Analysis", "Machine Learning",
          "Insight & Conclusion"]
 page = st.sidebar.radio("Table of contents", pages)
@@ -50,6 +45,9 @@ add_selectbox = st.sidebar.selectbox(
     'You can contact me!',
     ('Email: Harranu@gmail.com', 'Telephone: +49 1521 3452 042')
 )
+
+url = "https://github.com/Harranu/WHRProject"
+st.sidebar.markdown(f'<a href="{url}" target="_blank"><button>Download Resource</button></a>', unsafe_allow_html=True)
 
 if page == pages[0]:
     st.write("<h1 style='text-align: center;'>World Happiness Project Report</h1>", unsafe_allow_html=True)
@@ -78,9 +76,6 @@ if page == pages[1]:
              " the new dataset and compare the results.<br><br> The outcome will help countries and policy makers determine "
              "the factors that influence overall happiness of the people and areas that can be improved in view of decision "
              "and policy making.<br><br></div>", unsafe_allow_html=True)
-    st.markdown("<hr class='custom-hr-dc'>", unsafe_allow_html=True)
-    url = "https://github.com/Harranu/WHR-Repository/"
-    st.markdown("[Download Resource](%s)" % url)
 
 # ***  Clean the Data *** #
 if page == pages[2]:
