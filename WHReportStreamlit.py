@@ -50,12 +50,11 @@ url = "https://github.com/Harranu/WHRProject"
 st.sidebar.markdown(f'<a href="{url}" target="_blank"><button>Download Resource</button></a>', unsafe_allow_html=True)
 
 if page == pages[0]:
-    st.write("<h1 style='text-align: center;'>World Happiness Project Report</h1>", unsafe_allow_html=True)
+    st.write("<h1 style='text-align: center;'>World Happiness Report Project</h1>", unsafe_allow_html=True)
     #    st.image("whr_image003.png", caption="Caption here", use_column_width=True, clamp=True)
     st.image("whr_image003.png", use_column_width=True, clamp=True)
-    st.write("<div class='customPrefaceFont'>Data Analysis Project Report "
-             "<br>Cohort of July, 2024 Bootcamp organised by DataScientest<br> "
-             "Presented by Okwudili Harrison Anuforo </div>", unsafe_allow_html=True)
+    st.write("<div class='customPrefaceFont'>Data Analysis Project "
+             "<br>Presented by Okwudili Harrison Anuforo </div>", unsafe_allow_html=True)
 
 if page == pages[1]:
     st.write("<h2>Introduction</h2>", unsafe_allow_html=True)
@@ -1046,7 +1045,6 @@ elif page == pages[4]:
             fig.update_xaxes(title_text='', row=row, col=col) # Model
             fig.update_yaxes(title_text='', row=row) # Metrics
 
-        # Update layout to match the original plot's style
         fig.update_layout(
             title_text='', showlegend=False, # Model Evaluation Metrics
             height=900, width=600,
@@ -1156,11 +1154,6 @@ elif page == pages[4]:
                                                       'Predicted Ladder score LR',
                                                       'Predicted Ladder score DTR',
                                                       'Predicted Ladder score RFR']]
-        #
-        # compare_predicted_scores = whr_df_copy[['Country name', 'Ladder score',
-        #                                         'Predicted Ladder score LR',
-        #                                         'Predicted Ladder score DTR',
-        #                                         'Predicted Ladder score RFR']]
 
         st.write("Model prediction Comparison")
         st.dataframe(compare_predicted_scores)
@@ -1256,7 +1249,7 @@ elif page == pages[4]:
         # Define colors for clusters
         cluster_colors = ['blue', 'green', 'orange', 'purple', 'pink']
 
-        # Plotting with Plotly Graph Objects
+        # Plot
         fig = go.Figure()
 
         # Add scatter plot for clusters
@@ -1303,32 +1296,32 @@ elif page == pages[4]:
         }, index=future_years)
 
         # Predict future scores using the trained models
-        future_predictions_LR = modelLR.predict(future_data)
+      #  future_predictions_LR = modelLR.predict(future_data)
         future_predictions_DTR = modelDTR.predict(future_data)
         future_predictions_RFR = modelRFR.predict(future_data)
 
         # Combine historical and future data
         historical_data = whr_df.groupby('year')['Ladder score'].mean()
-        future_data['Ladder score LR'] = future_predictions_LR
+    #    future_data['Ladder score LR'] = future_predictions_LR
         future_data['Ladder score DTR'] = future_predictions_DTR
         future_data['Ladder score RFR'] = future_predictions_RFR
 
         # Prepare data for plotting
-        combined_data_LR = pd.concat([historical_data, future_data['Ladder score LR']])
+      #  combined_data_LR = pd.concat([historical_data, future_data['Ladder score LR']])
         combined_data_DTR = pd.concat([historical_data, future_data['Ladder score DTR']])
         combined_data_RFR = pd.concat([historical_data, future_data['Ladder score RFR']])
 
-        # Convert to DataFrame for Plotly
+        # Plot the DataFrame
         plot_data = pd.DataFrame({
-            'Year': combined_data_LR.index,
-            'Linear Regressor': combined_data_LR.values,
+          # 'Year': combined_data_LR.index,
+            'Year': combined_data_DTR.index,
+          # 'Linear Regressor': combined_data_LR.values,
             'Decision Tree Regressor': combined_data_DTR.values,
             'Random Forest Regressor': combined_data_RFR.values
         })
 
-        # Melt the DataFrame for Plotly
         plot_data = plot_data.reset_index().melt(id_vars='Year',
-                                                 value_vars=['Linear Regressor', 'Decision Tree Regressor',
+                                                 value_vars=['Decision Tree Regressor', # value_vars=['Linear Regressor', 'Decision Tree Regressor',
                                                              'Random Forest Regressor'],
                                                  var_name='Model', value_name='Ladder Score')
 
