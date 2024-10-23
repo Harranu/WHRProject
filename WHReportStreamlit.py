@@ -69,9 +69,9 @@ if page == pages[1]:
              "data using analytical- and machine learning methods and present it using interactive visualizations, to determine the combinations of factors that explains "
              "why some countries are ranked to be happier than others. I will merge the available dataset of the "
              "world happiness report dataset from 2005 to 2021 as my base dataset and apply various machine learning methods "
-             " to train and make predictions on the trained models with a sample data from this base dataset on 80/20 split. To validate or invalidate "
-             "the outcome of the first prediction, I will make predictions on the trained models with new but "
-             "similar dataset of 2022 to 2024. Finally, I will retrain the models and make another prediction with "
+             "to train and make predictions on the trained models with a sample data from the base dataset on 80/20 split. To validate or invalidate "
+             "the outcome of the trained models prediction, I will make predictions on the trained models with new but "
+             "similar dataset of 2022 to 2024. Finally, I will retrain the models and make further prediction with "
              " the new dataset and compare the results.<br><br> The outcome will help countries and policy makers determine "
              "the factors that influence overall happiness of the people and areas that can be improved in view of decision "
              "and policy making.<br><br></div>", unsafe_allow_html=True)
