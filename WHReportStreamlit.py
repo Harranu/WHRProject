@@ -352,8 +352,8 @@ if page == pages[3]:
         # fig.update_layout(autosize=True, width=1200, height=800,margin=dict(l=0, r=0, b=10, t=10, pad=1, autoexpand=True ))
         # Create an expander
         with st.expander("Interpretation/Insight"):
-            st.write("The essence of this geolocation map is to understand  the spread of WHR project in terms"
-                     " of  countries and regions al well as the increasing rates of participation since inception."
+            st.write("The essence of this geolocation map is to understand  the spread of WHR project in terms "
+                     " of  countries and regions al well as the increasing rates of participation since inception. "
                      " As could be seen from this map at the early stage of the project around 2005-2006 fewer "
                      "countries participated. However at a point from 2007 onward we could see the exponential "
                      "increase of the geographical spread of participants to include more countries mainly from "
@@ -362,7 +362,7 @@ if page == pages[3]:
                      "insight is the drastic decrease of participation in 2020, most notable in African and some parts of "
                      "Asia, one can assumed that this has to do with the world event, specifically the Covid19 pandemic, "
                      "which restricted the movement of people around the world  for a certain period. This map also give us "
-                     "better insight into the the ladder and feature scores of each countrie across time. Hover on the country"
+                     "better insight into the the ladder and feature scores of each countrie across time. Hover on the country "
                      "geolocation on the map to view the specific countries scores.")
         st.write("\n")
 
