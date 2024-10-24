@@ -46,9 +46,6 @@ add_selectbox = st.sidebar.selectbox(
     ('Email: Harranu@gmail.com', 'Telephone: +49 1521 3452 042')
 )
 
-url = "https://github.com/Harranu/WHRProject"
-st.sidebar.markdown(f'<a href="{url}" target="_blank"><button>Download Resource</button></a>', unsafe_allow_html=True)
-
 if page == pages[0]:
     st.write("<h1 style='text-align: center;'>World Happiness Report Project</h1>", unsafe_allow_html=True)
     #    st.image("whr_image003.png", caption="Caption here", use_column_width=True, clamp=True)
